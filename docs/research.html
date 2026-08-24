@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AD Meta-Transcriptomic Study — Lucas VHH Tran</title>
+  <meta name="description" content="Methods and outputs for a cross-platform meta-analysis of the atopic dermatitis transcriptomic disease signature across 39 datasets and 2,138 individuals.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="progress" aria-hidden="true"></div>
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="brand" href="index.html">Lucas VHH Tran</a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="research.html" aria-current="page">Research</a>
+        <a href="projects.html">Projects</a>
+        <a href="blog.html">Writing</a>
+        <a href="assets/CVLucasTRAN.pdf">CV</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="icon-btn" type="button" data-theme-toggle aria-label="Toggle dark mode">◐</button>
+        <button class="menu-btn" type="button" data-menu aria-expanded="false" aria-label="Open menu">☰</button>
+      </div>
+    </div>
+    <nav class="wrap mobile-panel" data-mobile-nav>
+      <a href="index.html">Home</a>
+      <a href="research.html">Research</a>
+      <a href="projects.html">Projects</a>
+      <a href="blog.html">Writing</a>
+      <a href="assets/CVLucasTRAN.pdf">CV</a>
+    </nav>
+  </header>
+
+  <main id="main" class="section">
+    <div class="wrap">
+      <p class="kicker">Study</p>
+      <h1 class="page-title">Atopic dermatitis transcriptomic disease signature</h1>
+      <p class="lede">A two-contrast random-effects meta-analysis of 39 GEO datasets covering 2,138 individuals. Code, methods, and data pointers live in this repository.</p>
+      <div class="actions" style="margin-bottom:2rem">
+        <a class="btn btn-primary" href="https://doi.org/10.5281/zenodo.20707787">Zenodo deposit</a>
+        <a class="btn btn-ghost" href="https://github.com/vanhungtran/Atopic-Dermatitis-Meta-Transcriptomic">GitHub</a>
+        <a class="btn btn-ghost" href="https://github.com/vanhungtran/Atopic-Dermatitis-Meta-Transcriptomic/blob/master/METHODS.md">METHODS.md</a>
+      </div>
+
+      <div class="stats" style="margin-top:0">
+        <div class="stat"><b>39</b><span>Datasets from GEO</span></div>
+        <div class="stat"><b>2,138</b><span>Individuals</span></div>
+        <div class="stat"><b>135</b><span>Gene field-defect signature</span></div>
+      </div>
+
+      <article class="prose" style="margin-top:2.4rem">
+        <h2>Design</h2>
+        <p>Each study is placed on a 2×2 grid of AD status (AD, healthy control) by lesion status (lesional, non-lesional). Healthy controls contribute only non-lesional skin. This yields two independent gene-level effects:</p>
+        <div class="method-grid">
+          <div class="panel">
+            <p class="eyebrow">β<sub>D</sub> · disease</p>
+            <h3>AD non-lesional vs healthy control</h3>
+            <p>Unpaired comparison in 15 datasets. Captures the field defect already present in clinically uninvolved AD skin.</p>
+          </div>
+          <div class="panel">
+            <p class="eyebrow">β<sub>L</sub> · lesion</p>
+            <h3>AD lesional vs AD non-lesional</h3>
+            <p>22 datasets, 12 with paired within-patient biopsies. Linear models block for patient when possible.</p>
+          </div>
+        </div>
+
+        <h2>Pooling</h2>
+        <p>Per-dataset differential expression uses <strong>limma</strong> (microarray) or <strong>DESeq2</strong> (RNA-seq). Identifiers are mapped to current HGNC symbols before any merge. Random-effects meta-analysis is REML via <strong>metafor</strong>. Genes in fewer than five datasets are excluded. Heterogeneity is reported with Cochran’s Q, I², τ², and 95% prediction intervals.</p>
+
+        <h2>Causal extensions</h2>
+        <ul>
+          <li><strong>Trait vs state</strong> — genes dysregulated in uninvolved skin (trait-like) versus lesion-restricted (state-like), after housekeeping filters and |log2FC| ≥ 0.5.</li>
+          <li><strong>GWAS annotation</strong> — overlap with Paternoster 2015, Sliz 2022, and Weidinger 2018 catalogs, plus GTEx skin eQTL coloc flags. This is annotation, not a formal coloc or MR test.</li>
+          <li><strong>Treatment directionality</strong> — whether lesion-axis genes reverse with therapy.</li>
+          <li><strong>Drug repurposing</strong> — druggability plus signature reversal.</li>
+        </ul>
+
+        <h2>Key outputs</h2>
+        <ul>
+          <li><code>disease_biomarker_signature_final.csv</code> — 135-gene field-defect signature</li>
+          <li><code>core_disease_signature_final.csv</code> — consensus-ranked disease genes</li>
+          <li><code>causal_summary.csv</code> — integrated causal evidence</li>
+          <li><code>ad_ls_decomposition_summary.csv</code> — three-group AD/LS partition</li>
+        </ul>
+        <p>Curated input tables are on Zenodo (DOI 10.5281/zenodo.20707787) or available from the corresponding author.</p>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-row">
+      <span>© 2026 Lucas VHH Tran</span>
+      <span>Contact: luctran.biostats@gmail.com</span>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>

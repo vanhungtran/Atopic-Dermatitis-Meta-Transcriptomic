@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects — Lucas VHH Tran</title>
+  <meta name="description" content="Open-source biostatistics, bioinformatics, and data science projects by Lucas VHH Tran.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="progress" aria-hidden="true"></div>
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="brand" href="index.html">Lucas VHH Tran</a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="research.html">Research</a>
+        <a href="projects.html" aria-current="page">Projects</a>
+        <a href="blog.html">Writing</a>
+        <a href="assets/CVLucasTRAN.pdf">CV</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="icon-btn" type="button" data-theme-toggle aria-label="Toggle dark mode">◐</button>
+        <button class="menu-btn" type="button" data-menu aria-expanded="false" aria-label="Open menu">☰</button>
+      </div>
+    </div>
+    <nav class="wrap mobile-panel" data-mobile-nav>
+      <a href="index.html">Home</a>
+      <a href="research.html">Research</a>
+      <a href="projects.html">Projects</a>
+      <a href="blog.html">Writing</a>
+      <a href="assets/CVLucasTRAN.pdf">CV</a>
+    </nav>
+  </header>
+
+  <main id="main" class="section">
+    <div class="wrap">
+      <p class="kicker">Open source</p>
+      <h1 class="page-title">Projects</h1>
+      <p class="lede">R packages, Shiny apps, Quarto books, and research code — mostly for biomarkers, omics, and clinical statistics.</p>
+
+      <div class="filters" role="tablist" aria-label="Filter projects">
+        <button class="filter-btn is-on" type="button" data-filter="all">All</button>
+        <button class="filter-btn" type="button" data-filter="package">Packages</button>
+        <button class="filter-btn" type="button" data-filter="shiny">Shiny</button>
+        <button class="filter-btn" type="button" data-filter="book">Books</button>
+        <button class="filter-btn" type="button" data-filter="research">Research</button>
+        <button class="filter-btn" type="button" data-filter="python">Python</button>
+      </div>
+
+      <div class="project-grid">
+        <article class="card" data-category="package">
+          <span class="tag">R package</span>
+          <h3>atcddd</h3>
+          <p>WHO ATC/DDD classification and Defined Daily Dose, offline-capable.</p>
+          <a class="more" href="https://vanhungtran.github.io/atcddd/">View →</a>
+        </article>
+        <article class="card" data-category="package">
+          <span class="tag">R package</span>
+          <h3>aucmat</h3>
+          <p>Matrix ROC for high-dimensional biomarkers with DeLong and bootstrap inference.</p>
+          <a class="more" href="https://vanhungtran.github.io/aucmat/">View →</a>
+        </article>
+        <article class="card" data-category="package">
+          <span class="tag">R package</span>
+          <h3>cliomicplot</h3>
+          <p>Publication plots: forest, volcano, Kaplan–Meier, waterfall, heatmaps.</p>
+          <a class="more" href="https://vanhungtran.github.io/cliomicplot/">View →</a>
+        </article>
+        <article class="card" data-category="package">
+          <span class="tag">R package</span>
+          <h3>repurp</h3>
+          <p>Drug–gene interaction networks with multiple visualization backends.</p>
+          <a class="more" href="https://github.com/vanhungtran/repurp">View →</a>
+        </article>
+        <article class="card" data-category="package">
+          <span class="tag">R package</span>
+          <h3>rcreg</h3>
+          <p>Random coefficient regression (LMMs) for repeated measures.</p>
+          <a class="more" href="https://github.com/vanhungtran/rcreg">View →</a>
+        </article>
+        <article class="card" data-category="package">
+          <span class="tag">R package</span>
+          <h3>OlinkViz</h3>
+          <p>Visualization helpers for Olink proteomics panels.</p>
+          <a class="more" href="https://github.com/vanhungtran/OlinkViz">View →</a>
+        </article>
+        <article class="card" data-category="shiny">
+          <span class="tag">Shiny</span>
+          <h3>Feature Selection Studio</h3>
+          <p>Random Forest, Boruta, RFE, and statistical tests in the browser.</p>
+          <a class="more" href="https://vanhungtran.shinyapps.io/FSplus/">Launch →</a>
+        </article>
+        <article class="card" data-category="shiny">
+          <span class="tag">Shiny</span>
+          <h3>FDA Novel Drug Approvals</h3>
+          <p>Interactive dashboard of FDA approvals, 2015–2025.</p>
+          <a class="more" href="https://vanhungtran.shinyapps.io/shiapp/">Launch →</a>
+        </article>
+        <article class="card" data-category="shiny">
+          <span class="tag">Shiny</span>
+          <h3>survivalApp</h3>
+          <p>Kaplan–Meier, Cox PH, forest plots, and publication exports.</p>
+          <a class="more" href="https://github.com/vanhungtran/survivalApp">View →</a>
+        </article>
+        <article class="card" data-category="shiny">
+          <span class="tag">Shiny</span>
+          <h3>WGCNAApp</h3>
+          <p>WGCNA, DESeq2, QC, and GO/KEGG enrichment in one app.</p>
+          <a class="more" href="https://github.com/vanhungtran/WGCNAApp">View →</a>
+        </article>
+        <article class="card" data-category="book">
+          <span class="tag">Book</span>
+          <h3>PDPKwithR</h3>
+          <p>21-chapter Quarto book on PK/PD modeling with R.</p>
+          <a class="more" href="https://vanhungtran.github.io/PDPKwithR/">Read →</a>
+        </article>
+        <article class="card" data-category="book">
+          <span class="tag">Book</span>
+          <h3>RforMS</h3>
+          <p>26 chapters on mass spectrometry with R/Bioconductor.</p>
+          <a class="more" href="https://vanhungtran.github.io/RforMS/">Read →</a>
+        </article>
+        <article class="card" data-category="book">
+          <span class="tag">Book</span>
+          <h3>LLM FAQ</h3>
+          <p>Bookdown notes on large language models, with practical FAQs.</p>
+          <a class="more" href="https://bookdown.org/tranhungydhcm/mybook/">Read →</a>
+        </article>
+        <article class="card" data-category="research">
+          <span class="tag">Research</span>
+          <h3>AD Meta-Transcriptomic</h3>
+          <p>39 datasets, 2,138 subjects — disease signature, causal layers, repurposing.</p>
+          <a class="more" href="research.html">Overview →</a>
+        </article>
+        <article class="card" data-category="research">
+          <span class="tag">Research</span>
+          <h3>CyTOF Workflow</h3>
+          <p>Mass cytometry with FlowSOM, differential analysis, Bioconductor.</p>
+          <a class="more" href="https://vanhungtran.github.io/CyTOFworkflow/">View →</a>
+        </article>
+        <article class="card" data-category="research">
+          <span class="tag">Research</span>
+          <h3>latent_pathR</h3>
+          <p>Longitudinal transcriptomic pathway analysis with GSVA / Markov structure.</p>
+          <a class="more" href="https://github.com/vanhungtran/latent_pathR">View →</a>
+        </article>
+        <article class="card" data-category="python">
+          <span class="tag">Python</span>
+          <h3>Airflow pipeline</h3>
+          <p>Apache Airflow plus a dashboard for clinical / SecuTrial data.</p>
+          <a class="more" href="https://github.com/vanhungtran/airflow-data-pipeline">View →</a>
+        </article>
+        <article class="card" data-category="python">
+          <span class="tag">Python</span>
+          <h3>MsScope</h3>
+          <p>Python tooling around mass spectrometry inspection.</p>
+          <a class="more" href="https://github.com/vanhungtran/MsScope">View →</a>
+        </article>
+      </div>
+
+      <p style="margin-top:2rem"><a class="btn btn-ghost" href="https://github.com/vanhungtran?tab=repositories">All repositories on GitHub →</a></p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-row">
+      <span>© 2026 Lucas VHH Tran</span>
+      <span>github.com/vanhungtran</span>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>
