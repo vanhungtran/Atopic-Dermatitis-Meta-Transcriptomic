@@ -7,6 +7,12 @@ Disease Signature Across 39 Datasets (2,138 Individuals)"**
 
 Van Hung Huynh-Tran — luctran.biostats@gmail.com
 
+## Website
+
+A companion site (author profile, study overview, projects, writing) lives in
+[`docs/`](docs/). After merge, enable GitHub Pages: **Settings → Pages →
+GitHub Actions**. The Pages workflow deploys `docs/` from `master`.
+
 ---
 
 ## Requirements
